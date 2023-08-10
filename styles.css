@@ -1,0 +1,241 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* END OF RESET */
+
+/* COLOR PALETTE
+
+
+
+*/
+
+html {
+    height: 100%;
+    width: 100%;
+}
+ 
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    min-height: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 200px repeat(2, 1fr) 30px;
+}
+
+header {
+    width: 100%;
+    height: 30px;
+    grid-area: 1 / 2 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+#showForm {
+    height: 30px;
+    border-radius: 10px;
+    width: 60px;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#showForm:active {
+    box-shadow: inset 1px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #1F271B;
+}
+
+p {
+    overflow: hidden;
+    height: auto;
+}
+
+form {
+    grid-area: 2 / 2 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.forminput {
+    height: 30px;
+    border: none;
+    background-color: rgb(228, 228, 228);
+    padding-left: 5px;
+    text-align: center;
+    letter-spacing: 2px;
+    border-radius: 10px;;
+    font-weight: 600;
+    min-width: 500px;
+}
+
+input:focus {
+    background-color: #EE964B;
+    outline: none;
+}
+
+::placeholder:focus {
+    color: #1F271B;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(0, 0, 0);
+    opacity: 1; /* Firefox */
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.chkbx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.book-library {
+    grid-area: 3 / 1 / 5 / 6;
+    background-color: #1F271B;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 350px));
+    padding: 20px;
+    gap: 20px;
+    grid-auto-rows: minmax(200px, 350px);
+    grid-auto-columns: minmax(150px, 250px);
+}
+
+.book-library-max {
+    grid-area: 2 / 1 / 5 / 6;
+    background-color: #1F271B;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 250px));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 350px));
+    padding: 20px;
+    gap: 20px;
+    grid-auto-rows: minmax(200px, 350px);
+    grid-auto-columns: minmax(150px, 250px);
+}
+
+.book-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    grid-area: 5 / 1 / 6 / 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+}
+
+#submitButton {
+    background-color: #1F271B;
+    border-radius: 10px;
+    width: 150px;
+    align-self: center;
+    height: 30px;
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+}
+
+#submitButton:active {
+    background-color: #EE964B;
+}
+
+.delete-button {
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button:active {
+    box-shadow: inset 1px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.read-button-notread,
+.read-button-read {
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: -10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.read-button-read {
+    background-color: rgb(73, 167, 73);
+}
+
+.read-button-notread {
+    background-color: rgb(255, 142, 142);
+}

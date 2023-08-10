@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+        <button id="showForm">HIDE</button>
+    </header>
+    <form id="bookForm">
+        <input class="forminput" type="text" name="title" id="title" placeholder="Book title">
+        <input class="forminput" type="text" placeholder="Book author" name="author" id="author">
+        <input class="forminput" type="number" placeholder="Release year" name="year" id="year">
+        <input class="forminput" type="number" name="pages" id="pages" placeholder="Pages">
+        <div class="chkbx">
+            <p>Read?</p>
+            <input type="checkbox" name="read" id="read">
+        </div>
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+    <div class="book-library"></div>
+    <footer>Kamil Brzezinski 4 TOP</footer>
+</body>
+</html>
